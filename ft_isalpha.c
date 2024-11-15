@@ -1,4 +1,4 @@
-#include <libft.h>
+#include "libft.h"
 
 int ft_isalpha(int c)
 {
@@ -7,10 +7,10 @@ int ft_isalpha(int c)
     return (0);
 }
 
-#include<stdio.h>
-int main()
-{
-    char c = '.';
-    int out = ft_isalpha(c);
-    printf("%d", out);
-}
+// #include<stdio.h>
+// int main()
+// {
+//     char c = '.';
+//     int out = ft_isalpha(c);
+//     printf("%d", out);
+// }

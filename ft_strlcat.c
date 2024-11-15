@@ -1,4 +1,4 @@
-#include <libft.h>
+#include "libft.h"
 
 size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -24,12 +24,12 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
     return (out);
 }
 
-#include<stdio.h>
-int main()
-{
-    char dst[] = "hehe";
-    char src[] = "haha";
-    size_t size = 5;
-    size_t out = ft_strlcat(dst, src, size);
-    printf("dest is '%s', src is '%s', size is '%zu', out is '%zu'\n", dst, src, size, out);
-}
+// #include<stdio.h>
+// int main()
+// {
+//     char dst[] = "hehe";
+//     char src[] = "haha";
+//     size_t size = 5;
+//     size_t out = ft_strlcat(dst, src, size);
+//     printf("dest is '%s', src is '%s', size is '%zu', out is '%zu'\n", dst, src, size, out);
+// }
