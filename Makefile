@@ -6,7 +6,7 @@
 #    By: bosokyrk <bosokyrk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/13 17:55:00 by bosokyrk          #+#    #+#              #
-#    Updated: 2024/11/13 17:56:01 by bosokyrk         ###   ########.fr        #
+#    Updated: 2024/11/15 15:22:55 by bosokyrk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,9 +59,6 @@ $(NAME): ${OBJS}
 	${LIBC} $(NAME) $(OBJS) 
 
 all: $(NAME)
-
-bonus: $(NAME)
-	${LIBC} $(NAME)
 
 fclean: clean
 	$(RM) $(NAME)
