@@ -18,8 +18,8 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
 // int main()
 // {
 //     const char s1[] = "amo";
-//     const char s2[] = "amoagmn";
-//     int n = 0;
+//     const char s2[] = "";
+//     int n = 100;
 //     int out = ft_strncmp(s1, s2, n);
 //     int out2 = strncmp(s1, s2, n);
 //     printf("%d || ", out );
