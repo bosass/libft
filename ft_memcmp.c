@@ -1,24 +1,34 @@
-// #include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bosokyrk <bosokyrk@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/26 16:09:37 by bosokyrk          #+#    #+#             */
+/*   Updated: 2024/11/26 16:10:49 by bosokyrk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    size_t i;
-    char *ss1;
-    char *ss2;
-    // int out;
+	size_t	i;
+	char	*ss1;
+	char	*ss2;
 
-    i = 0;
-    ss1 = (char*)s1;
-    ss2 = (char*)s2;
-    while(i < n)
-    {
-        if((unsigned char)ss1[i] == (unsigned char)ss2[i])
-            i++;
-        else
-            return((unsigned char)ss1[i] - (unsigned char)ss2[i]);
-    }
-    return(0);
+	i = 0;
+	ss1 = (char *)s1;
+	ss2 = (char *)s2;
+	while (i < n)
+	{
+		if ((unsigned char)ss1[i] == (unsigned char)ss2[i])
+			i++;
+		else
+			return ((unsigned char)ss1[i] - (unsigned char)ss2[i]);
+	}
+	return (0);
 }
 // #include <stdio.h>
 // #include <string.h>

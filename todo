@@ -21,6 +21,7 @@
 • atoi			//
 • calloc		//
 • strdup		//
+- [] xd
 
 Function name		ft_substr
 Prototype			char *ft_substr(char const *s, unsigned int start, size_t len);
@@ -90,7 +91,7 @@ Return value		The string created from the successive applications of ’f’.
 External functs.	malloc
 Description			Applies the function f to each character of the string s, passing its index as the first argument and the character itself as the second. 
 					A new string is created (using malloc(3)) to collect the results from the successive applications of f.
-__________________________________________________________________________________________
+__________________________________________________________________________________________\\
 
 Function name		ft_striteri
 Prototype			void ft_striteri(char *s, void (*f)(unsigned int, char*));
@@ -101,7 +102,7 @@ Return value		None
 External functs.	None
 Description			Applies the function ’f’ on each character of the string passed as argument, passing its index as first argument. 
 					Each character is passed by address to ’f’ to be modified if necessary.
-__________________________________________________________________________________________
+__________________________________________________________________________________________\\
 
 Function name		ft_putchar_fd
 Prototype			void ft_putchar_fd(char c, int fd);
@@ -111,7 +112,7 @@ Parameters			c: The character to output.
 Return value		None
 External functs.	write
 Description			Outputs the character ’c’ to the given file descriptor.
-__________________________________________________________________________________________
+__________________________________________________________________________________________\\
 
 Function name		ft_putstr_fd
 Prototype			void ft_putstr_fd(char *s, int fd);
@@ -121,7 +122,7 @@ Parameters			s: The string to output.
 Return value		None
 External functs.	write
 Description			Outputs the string ’s’ to the given file descriptor.
-__________________________________________________________________________________________
+__________________________________________________________________________________________\\
 
 Function name		ft_putendl_fd
 Prototype			void ft_putendl_fd(char *s, int fd);
@@ -131,7 +132,7 @@ Parameters			s: The string to output.
 Return value		None
 External functs.	write
 Description			Outputs the string ’s’ to the given file descriptor followed by a newline.
-__________________________________________________________________________________________
+__________________________________________________________________________________________\\
 
 Function name		ft_putnbr_fd
 Prototype			void ft_putnbr_fd(int n, int fd);
@@ -141,3 +142,4 @@ Parameters			n: The integer to output.
 Return value		None
 External functs.	write
 Description			Outputs the integer ’n’ to the given file descriptor.
+__________________________________________________________________________________________\\
