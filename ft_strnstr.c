@@ -6,7 +6,7 @@
 /*   By: bosokyrk <bosokyrk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:29:22 by bosokyrk          #+#    #+#             */
-/*   Updated: 2024/11/26 16:30:11 by bosokyrk         ###   ########.fr       */
+/*   Updated: 2024/11/26 22:11:06 by bosokyrk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,12 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	k = 0;
-	while (i + 1 < len && big[i] != '\0')
+	if (little[0] == '\0')
+		return ((char *)big);
+	while (i < len && big[i] != '\0')
 	{
 		k = 0;
-		while (big[i + k] == little[k])
+		while (big[i + k] == little[k] && (i + k) < len)
 		{
 			if (little[k + 1] == '\0')
 				return ((char *)big + i);

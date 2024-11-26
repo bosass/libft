@@ -6,7 +6,7 @@
 /*   By: bosokyrk <bosokyrk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:19:24 by bosokyrk          #+#    #+#             */
-/*   Updated: 2024/11/26 17:35:00 by bosokyrk         ###   ########.fr       */
+/*   Updated: 2024/11/26 21:55:56 by bosokyrk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
+	size_t	i;
 
-	i = 0;
-	while (s[i] != '\0')
-		write(fd, &s[i], 1);
+	i = ft_strlen(s);
+		write(fd, s, i);
 }

@@ -6,7 +6,7 @@
 /*   By: bosokyrk <bosokyrk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:31:15 by bosokyrk          #+#    #+#             */
-/*   Updated: 2024/11/26 17:33:32 by bosokyrk         ###   ########.fr       */
+/*   Updated: 2024/11/26 20:22:39 by bosokyrk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-char	*str;
+	char	*str;
 	size_t	i;
 	size_t	str_len;
 

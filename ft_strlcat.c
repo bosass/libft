@@ -6,7 +6,7 @@
 /*   By: bosokyrk <bosokyrk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:24:53 by bosokyrk          #+#    #+#             */
-/*   Updated: 2024/11/26 20:05:13 by bosokyrk         ###   ########.fr       */
+/*   Updated: 2024/11/26 20:39:29 by bosokyrk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,30 +18,33 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	k;
 	size_t	out;
 
-	i = 0;
-	k = 0;
+	i = ft_strlen(dst);
+	k = ft_strlen(src);
 	out = 0;
-	while (dst[i] != '\0')
-		i++;
+	if (!dst && !size)
+		return (i);
+	if (i > size)
+		i = size;
+	if (i == size)
+		return (size + k);
+	out = i + k;
+	k = 0;
 	while (src[k] != '\0' && i + k + 1 < size)
 	{
 		dst[i + k] = src[k];
 		k++;
 	}
 	dst[i + k] = '\0';
-	k = 0;
-	while (src[k] != '\0')
-		k++;
-	out = i + k;
 	return (out);
 }
 
-#include<stdio.h>
-int main()
-{
-    char dst[] = "lorem ipsum dolor sit amet";
-    char src[] = "haha";
-    size_t size = 5;
-    size_t out = ft_strlcat(dst, src, size);
-    printf("dest is '%s', src is '%s', size is '%zu', out is '%zu'\n", dst, src, size, out);
-}
+// #include<stdio.h>
+// int main()
+// {
+//     char dst[10];
+//     char src[] = "lorem ipsum dolor sit amet";
+//     size_t size = 0;
+//     size_t out = ft_strlcat(dst, src, size);
+//     printf("dest is '%s', src is '%s', size is 
+//'%zu', out is '%zu'\n", dst, src, size, out);
+// }

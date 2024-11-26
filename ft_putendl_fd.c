@@ -6,7 +6,7 @@
 /*   By: bosokyrk <bosokyrk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:18:27 by bosokyrk          #+#    #+#             */
-/*   Updated: 2024/11/26 17:35:26 by bosokyrk         ###   ########.fr       */
+/*   Updated: 2024/11/26 21:53:24 by bosokyrk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		write(fd, &s[i], 1);
+	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
 }
+
