@@ -6,7 +6,7 @@
 /*   By: bosokyrk <bosokyrk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:58:55 by bosokyrk          #+#    #+#             */
-/*   Updated: 2024/11/26 22:34:46 by bosokyrk         ###   ########.fr       */
+/*   Updated: 2024/11/27 17:18:33 by bosokyrk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,57 +33,57 @@ static int	ft_count_words(char const *s, char c)
 	return (count);
 }
 
-static char	*ft_make_words(char *word, char const *s, int j, int word_ln)
+static char	*ft_make_words(char *word, char const *s, int k, int word_ln)
 {
 	int	i;
 
 	i = 0;
 	while (word_ln > 0)
-		word[i++] = s[j - word_ln--];
+		word[i++] = s[k - word_ln--];
 	word[i] = 0;
 	return (word);
 }
 
-static char	**ft_split_words(char **res, char const *s, char c, int word_ct)
+static char	**ft_split_words(char **out, char const *s, char c, int word_ct)
 {
 	int	i;
-	int	j;
+	int	k;
 	int	word_ln;
 
 	i = 0;
-	j = 0 ;
+	k = 0 ;
 	word_ln = 0;
-	while (s[j] && i < word_ct)
+	while (s[k] && i < word_ct)
 	{
-		while (s[j] && s[j] == c)
-			j++;
-		while (s[j] && s[j] != c)
+		while (s[k] && s[k] == c)
+			k++;
+		while (s[k] && s[k] != c)
 		{
-			j++;
+			k++;
 			word_ln++;
 		}
-		res[i] = (char *)malloc(sizeof(char) * (word_ln + 1));
-		if (!res[i])
+		out[i] = (char *)malloc(sizeof(char) * (word_ln + 1));
+		if (!out[i])
 			return (0);
-		ft_make_words (res[i], s, j, word_ln);
+		ft_make_words (out[i], s, k, word_ln);
 		word_ln = 0;
 		i++;
 	}
-	res[i] = 0;
-	return (res);
+	out[i] = 0;
+	return (out);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	int		word_ct;
-	char	**res;
+	char	**out;
 
 	if (s == 0)
 		return (0);
 	word_ct = ft_count_words(s, c);
-	res = (char **)malloc(sizeof(char *) * (word_ct + 1));
-	if (!res)
+	out = (char **)malloc(sizeof(char *) * (word_ct + 1));
+	if (!out)
 		return (0);
-	ft_split_words (res, s, c, word_ct);
-	return (res);
+	ft_split_words (out, s, c, word_ct);
+	return (out);
 }
